@@ -18,28 +18,13 @@
         return (a / b)
       }
 
-      function show_html(id,resultado){
-        return document.getElementById(id_html).innerHTML="<span>"+resultado+"</span>";
+      function divide(){
+        var res = parseInt(dividir()).toFixed(2)
+        var res1 = parseFloat(dividir())
+        var res2 = Number(dividir())
+        return document.getElementById('html').innerHTML="<br>"+"<br>"+"Resultado parseInt = "+res + " "+"<br>"+ "Resultado parseFloat = " + " "+ res1 +" " +"<br>"+ " Resultado Number= "+ res2;
       }
 
-
-      function int(){
-            var resultado = parseInt(dividir()).toFixed(2)
-            id_html='parseInt'
-            show_html(id_html,resultado)
-        }
-
-        function float(){
-          var resultado = parseFloat(dividir())
-          id_html='parseFloat'
-          show_html(id_html,resultado)
-        }
-
-        function dividirNumber(){
-          var resultado = Number(dividir())
-          id_html='number'
-          show_html(id_html,resultado)
-        }
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -53,13 +38,7 @@
           Número 1: <input id="num1" type="number"/><br><br>
             <span>Dividido por:</span><br><br>
           Número 2: <input id="num2" type="number"/><br><br>
-        </div><!--col-sm-4-->
-        <div class="col-sm-4"><br>
-          <input type="button" value="parseInt" onclick="int(); return false;" /> <span id="parseInt" class="resultado"></span>
-          <hr>
-          <input type="button" value="parseFloat" onclick="float(); return false;" /> <span id="parseFloat" class="resultado"></span>
-          <hr>
-          <input type="button" value="number" onclick="dividirNumber(); return false;" />  <span id="number" class="resultado"></span>
+          <input type="button" value="Calcular" onclick="divide(); return false;" />  <span id="html" class="resultado"></span>
         </div><!--col-sm-4-->
       </div><!--row-->
     </div><!--container-fluid-->
