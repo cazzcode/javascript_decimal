@@ -18,11 +18,14 @@
         return (a / b)
       }
 
-      function divide(){
+      function resultados(){
         var res = parseInt(dividir()).toFixed(2)
         var res1 = parseFloat(dividir())
         var res2 = Number(dividir())
-        return document.getElementById('html').innerHTML="<br>"+"<br>"+"Resultado parseInt = "+res + " "+"<br>"+ "Resultado parseFloat = " + " "+ res1 +" " +"<br>"+ " Resultado Number= "+ res2;
+        return document.getElementById('html').innerHTML=
+          "<br>"+"<br>"+"Resultado parseInt = "+res + " "+
+          "<br>"+ "Resultado parseFloat = " + " "+ res1 +" " +
+          "<br>"+ " Resultado Number= "+ res2;
       }
 
     </script>
@@ -38,7 +41,7 @@
           Número 1: <input id="num1" type="number"/><br><br>
             <span>Dividido por:</span><br><br>
           Número 2: <input id="num2" type="number"/><br><br>
-          <input type="button" value="Calcular" onclick="divide(); return false;" />  <span id="html" class="resultado"></span>
+          <input type="button" value="Calcular" onclick="resultados(); return false;" />  <span id="html" class="resultado"></span>
         </div><!--col-sm-4-->
       </div><!--row-->
     </div><!--container-fluid-->
